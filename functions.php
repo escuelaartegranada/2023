@@ -189,7 +189,7 @@ function fpg_scripts() {
     wp_enqueue_style('fpg-style', get_stylesheet_uri(), array('fpg-google-fonts', 'fpg-font-awesome'), FPG_THEME_VERSION);
     
     // Enqueue theme JavaScript
-    wp_enqueue_script('fpg-script', FPG_THEME_URI . '/assets/js/theme.js', array('jquery'), FPG_THEME_VERSION, true);
+    wp_enqueue_script('fpg-script', get_template_directory_uri() . '/assets/js/theme.js', array('jquery'), FPG_THEME_VERSION, true);
     
     // Localize script for AJAX
     wp_localize_script('fpg-script', 'fpg_ajax', array(

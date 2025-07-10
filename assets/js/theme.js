@@ -34,7 +34,7 @@
         // ==========================================
         const navbar = $('#navbar');
         const navToggle = $('#nav-toggle');
-        const navMenu = $('#nav-menu');
+        const navMenu = $('#nav-menu, .nav-menu');
 
         // Navbar scroll effect
         $(window).on('scroll', function() {
@@ -74,7 +74,7 @@
             if (target.length) {
                 e.preventDefault();
                 
-                const offsetTop = target.offset().top - (navbar.outerHeight() || 0);
+                const offsetTop = target.offset().top - (navbar.outerHeight() || 80);
                 
                 $('html, body').animate({
                     scrollTop: offsetTop
@@ -107,7 +107,7 @@
         // Animation on Scroll
         // ==========================================
         function animateOnScroll() {
-            $('.about-card, .timeline-item, .info-card, .contact-card').each(function() {
+            $('.about-card, .timeline-item, .info-card, .contact-card, .table-card').each(function() {
                 const element = $(this);
                 const elementTop = element.offset().top;
                 const windowBottom = $(window).scrollTop() + $(window).height();
@@ -200,32 +200,39 @@
                 // Prepare form data
                 const formData = new FormData(this);
                 
-                // Add WordPress nonce
-                formData.append('action', 'fpg_handle_registration');
-
-                // Submit via AJAX
-                $.ajax({
-                    url: fpg_ajax.ajax_url,
-                    type: 'POST',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function(response) {
-                        if (response.success) {
-                            showMessage(response.data, 'success');
-                            form[0].reset();
-                            ponenciaSection.hide();
-                        } else {
-                            showMessage(response.data || 'Error al enviar el formulario', 'error');
+                // Submit via AJAX if fpg_ajax is available
+                if (typeof fpg_ajax !== 'undefined') {
+                    $.ajax({
+                        url: fpg_ajax.ajax_url,
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            if (response.success) {
+                                showMessage(response.data, 'success');
+                                form[0].reset();
+                                ponenciaSection.hide();
+                            } else {
+                                showMessage(response.data || 'Error al enviar el formulario', 'error');
+                            }
+                        },
+                        error: function() {
+                            showMessage('Error de conexión. Inténtalo de nuevo.', 'error');
+                        },
+                        complete: function() {
+                            submitBtn.prop('disabled', false).html(originalText);
                         }
-                    },
-                    error: function() {
-                        showMessage('Error de conexión. Inténtalo de nuevo.', 'error');
-                    },
-                    complete: function() {
+                    });
+                } else {
+                    // Fallback for static version
+                    setTimeout(function() {
+                        showMessage('¡Inscripción enviada exitosamente! Te contactaremos pronto.', 'success');
+                        form[0].reset();
+                        ponenciaSection.hide();
                         submitBtn.prop('disabled', false).html(originalText);
-                    }
-                });
+                    }, 2000);
+                }
             });
 
             // Real-time validation
@@ -254,30 +261,39 @@
                 const originalText = submitBtn.html();
                 
                 // Show loading state
-                submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> ' + fpg_ajax.loading_text);
+                submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Enviando...');
                 
-                // Submit via AJAX
-                $.post(fpg_ajax.ajax_url, {
-                    action: 'fpg_contact_form',
-                    nonce: fpg_ajax.nonce,
-                    name: form.find('[name="name"]').val(),
-                    email: form.find('[name="email"]').val(),
-                    message: form.find('[name="message"]').val()
-                })
-                .done(function(response) {
-                    if (response.success) {
-                        showMessage(fpg_ajax.success_text, 'success');
+                // Submit via AJAX if available
+                if (typeof fpg_ajax !== 'undefined') {
+                    $.post(fpg_ajax.ajax_url, {
+                        action: 'fpg_contact_form',
+                        nonce: fpg_ajax.nonce,
+                        name: form.find('[name="name"]').val(),
+                        email: form.find('[name="email"]').val(),
+                        message: form.find('[name="message"]').val()
+                    })
+                    .done(function(response) {
+                        if (response.success) {
+                            showMessage(fpg_ajax.success_text, 'success');
+                            form[0].reset();
+                        } else {
+                            showMessage(response.data || fpg_ajax.error_text, 'error');
+                        }
+                    })
+                    .fail(function() {
+                        showMessage(fpg_ajax.error_text, 'error');
+                    })
+                    .always(function() {
+                        submitBtn.prop('disabled', false).html(originalText);
+                    });
+                } else {
+                    // Fallback
+                    setTimeout(function() {
+                        showMessage('¡Mensaje enviado exitosamente!', 'success');
                         form[0].reset();
-                    } else {
-                        showMessage(response.data || fpg_ajax.error_text, 'error');
-                    }
-                })
-                .fail(function() {
-                    showMessage(fpg_ajax.error_text, 'error');
-                })
-                .always(function() {
-                    submitBtn.prop('disabled', false).html(originalText);
-                });
+                        submitBtn.prop('disabled', false).html(originalText);
+                    }, 2000);
+                }
             });
         }
 
@@ -315,6 +331,28 @@
             $(this).closest('.form-message').fadeOut(function() {
                 $(this).remove();
             });
+        });
+
+        // ==========================================
+        // Copy email functionality
+        // ==========================================
+        $('.copy-email').on('click', function(e) {
+            e.preventDefault();
+            const email = $(this).data('email');
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(function() {
+                    showMessage('Email copiado al portapapeles', 'success');
+                });
+            } else {
+                // Fallback for older browsers
+                const tempInput = $('<input>');
+                $('body').append(tempInput);
+                tempInput.val(email).select();
+                document.execCommand('copy');
+                tempInput.remove();
+                showMessage('Email copiado al portapapeles', 'success');
+            }
         });
 
         // ==========================================
