@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="II Foro Internacional de Paz Granada 2025: Violencia y Paz - Tensiones y Oportunidades hacia una Humanidad Común. Del 20 al 25 de octubre de 2025.">
+    <meta name="keywords" content="Foro Internacional de Paz, Granada 2025, Simposio de Investigación para la Paz, noviolencia, justicia social">
+    <meta name="author" content="Fundación Unamos Culturas">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="II Foro Internacional de Paz Granada 2025">
+    <meta property="og:description" content="Granada, Capital Mundial de la Paz. Únete del 20 al 25 de octubre de 2025">
+    <meta property="og:image" content="./assets/images/alhambra-hero.jpg">
+    <meta property="og:url" content="https://foropazgranada2025.org">
+    <meta property="og:type" content="website">
+    
+    <title>II Foro Internacional de Paz Granada 2025</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner">
+            <div class="peace-symbol"></div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./assets/images/logo-foro-paz.png" alt="Logo Foro Paz Granada 2025">
+                    <span>FORO PAZ GRANADA 2025</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#acerca" class="nav-link">Acerca del Foro</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#programa" class="nav-link">Programa <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#programa">Agenda General</a></li>
+                            <li><a href="#simposio">Simposio de Investigación</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#inscripcion" class="nav-link">Inscripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#galeria" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#noticias" class="nav-link">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#voluntarios" class="nav-link">Voluntarios</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="lang-toggle" id="lang-toggle">
+                        <i class="fas fa-globe"></i> ES
+                    </button>
+                    <a href="#inscripcion" class="btn-primary">Inscríbete Ahora</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <video autoplay muted loop class="hero-video">
+                    <source src="./assets/videos/alhambra-hero.mp4" type="video/mp4">
+                </video>
+                <img src="./assets/images/alhambra-hero.jpg" alt="Alhambra Granada" class="hero-fallback">
+            </div>
+            
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-title animate-fade-up">
+                            <span class="title-main">II Foro Internacional de Paz</span>
+                            <span class="title-location">Granada 2025</span>
+                            <span class="title-subtitle">Violencia y Paz - Tensiones y Oportunidades hacia una Humanidad Común</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle animate-fade-up" data-delay="0.3s">
+                            Granada, Capital Mundial de la Paz<br>
+                            <strong>20 al 25 de octubre de 2025</strong>
+                        </p>
+                        
+                        <div class="hero-actions animate-fade-up" data-delay="0.6s">
+                            <a href="#inscripcion" class="btn btn-primary btn-lg pulse">
+                                <i class="fas fa-user-plus"></i> Inscríbete Ahora
+                            </a>
+                            <a href="#programa" class="btn btn-outline btn-lg">
+                                <i class="fas fa-calendar"></i> Descubre el Programa
+                            </a>
+                        </div>
+                        
+                        <div class="hero-quote animate-fade-up" data-delay="0.9s">
+                            <p>"¿Y tú, qué haces por la paz?"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <div class="container">
+                <h2 class="section-title">Tiempo restante hasta el evento</h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">000</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Summary Section -->
+        <section class="event-summary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="summary-content">
+                            <h2 class="section-title">Un Espacio Plural para la Paz</h2>
+                            <p class="section-description">
+                                El II Foro Internacional de Paz Granada 2025 es un encuentro plural y diverso 
+                                que reúne a académicos, líderes sociales, artistas y ciudadanos comprometidos 
+                                con la construcción de una cultura de paz, justicia social y noviolencia.
+                            </p>
+                            <div class="summary-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-landmark"></i>
+                                    <div>
+                                        <h4>Inauguración Especial</h4>
+                                        <p>20 de octubre en el Palacio de Carlos V, Alhambra</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-music"></i>
+                                    <div>
+                                        <h4>Concierto de Clausura</h4>
+                                        <p>"Desaprender la guerra" con Luis Guitarra, 25 de octubre</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <h4>Simposio Internacional</h4>
+                                        <p>Investigación para la Paz, 28-30 de octubre (virtual)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="summary-carousel">
+                            <div class="carousel-container" id="summary-carousel">
+                                <div class="carousel-slide active">
+                                    <img src="./assets/images/alhambra-1.jpg" alt="Alhambra Granada">
+                                    <div class="slide-caption">
+                                        <h4>Palacio de Carlos V</h4>
+                                        <p>Sede de la inauguración del Foro</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="./assets/images/jardin-paz.jpg" alt="Jardín de la Paz">
+                                    <div class="slide-caption">
+                                        <h4>Jardín de la Paz</h4>
+                                        <p>Espacio simbólico de reconciliación</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="./assets/images/foro-anterior.jpg" alt="Foro anterior">
+                                    <div class="slide-caption">
+                                        <h4>Primera Edición</h4>
+                                        <p>Encuentro de culturas y saberes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-btn next" onclick="changeSlide(1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="carousel-indicators">
+                                <span class="indicator active" onclick="currentSlide(1)"></span>
+                                <span class="indicator" onclick="currentSlide(2)"></span>
+                                <span class="indicator" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizers Section -->
+        <section class="organizers-section">
+            <div class="container">
+                <h2 class="section-title">Organizadores y Aliados</h2>
+                <div class="organizers-grid">
+                    <div class="organizer-item" data-tooltip="Fundación Unamos Culturas">
+                        <img src="./assets/images/logos/unamos-culturas.png" alt="Fundación Unamos Culturas">
+                    </div>
+                    <div class="organizer-item" data-tooltip="IPAZ - Universidad de Granada">
+                        <img src="./assets/images/logos/ipaz-ugr.png" alt="IPAZ Universidad de Granada">
+                    </div>
+                    <div class="organizer-item" data-tooltip="Instituto CAPAZ">
+                        <img src="./assets/images/logos/capaz.png" alt="Instituto CAPAZ">
+                    </div>
+                    <div class="organizer-item" data-tooltip="Universidad de Łódź">
+                        <img src="./assets/images/logos/lodz.png" alt="Universidad de Łódź">
+                    </div>
+                    <div class="organizer-item" data-tooltip="Patronato de la Alhambra">
+                        <img src="./assets/images/logos/patronato-alhambra.png" alt="Patronato de la Alhambra">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Speakers Section -->
+        <section class="speakers-section">
+            <div class="container">
+                <h2 class="section-title">Colaboradores Destacados</h2>
+                <div class="speakers-grid">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="./assets/images/speakers/francisco-de-roux.jpg" alt="Padre Francisco de Roux">
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Padre Francisco de Roux</h3>
+                            <p>Presidente de la Comisión para el Esclarecimiento de la Verdad, la Convivencia y la No Repetición de Colombia</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="./assets/images/speakers/mario-lopez.jpg" alt="Mario López Martínez">
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Mario López Martínez</h3>
+                            <p>Director del Instituto de la Paz y los Conflictos de la Universidad de Granada</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="./assets/images/speakers/francesco-serafini.jpg" alt="Francesco Serafini">
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Francesco Serafini</h3>
+                            <p>Especialista en Estudios de Paz y Resolución de Conflictos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section class="quick-actions">
+            <div class="container">
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Programa Completo</h3>
+                        <p>Consulta todas las actividades, conferencias y talleres programados</p>
+                        <a href="#programa" class="action-link">Ver Programa</a>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Simposio de Investigación</h3>
+                        <p>Envía tu ponencia hasta el 15 de agosto de 2025</p>
+                        <a href="#simposio" class="action-link">Más Información</a>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Únete como Voluntario</h3>
+                        <p>Contribuye al éxito del Foro como voluntario</p>
+                        <a href="#voluntarios" class="action-link">Participar</a>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>Material Descargable</h3>
+                        <p>Accede a documentos, programas y recursos del evento</p>
+                        <a href="#" class="action-link" onclick="downloadProgram()">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./assets/images/logo-foro-paz.png" alt="Logo Foro Paz Granada 2025">
+                        <h3>II Foro Internacional de Paz Granada 2025</h3>
+                    </div>
+                    <p>Construyendo puentes hacia una humanidad común a través del diálogo, la cultura y la noviolencia.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#acerca">Acerca del Foro</a></li>
+                        <li><a href="#programa">Programa</a></li>
+                        <li><a href="#simposio">Simposio</a></li>
+                        <li><a href="#inscripcion">Inscripción</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul class="footer-links">
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#voluntarios">Voluntarios</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> unamosculturas@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +48 515 209 172</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Granada, España</p>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Suscríbete a nuestro boletín</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 II Foro Internacional de Paz Granada. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Desarrollado con ❤️ para la paz mundial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice">
+        <div class="cookie-content">
+            <p>Este sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.</p>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="btn btn-primary btn-sm">Aceptar</button>
+                <button id="decline-cookies" class="btn btn-outline btn-sm">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/countdown.js"></script>
+    <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/animations.js"></script>
+</body>
+</html>
