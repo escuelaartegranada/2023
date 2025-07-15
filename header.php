@@ -1,105 +1,41 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @package ForoPazGranada
- * @version 1.0.0
- */
-
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
-    <meta name="keywords" content="foro internacional, paz, Granada, 2025, conferencia, violencia, noviolencia, justicia social">
-    <meta name="author" content="Fundación Unamos Culturas">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
-    <meta property="og:title" content="<?php bloginfo('name'); ?>">
-    <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
-    <meta property="og:image" content="<?php echo esc_url(get_theme_mod('fpg_hero_image', get_template_directory_uri() . '/assets/images/og-image.jpg')); ?>">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="<?php echo esc_url(home_url('/')); ?>">
-    <meta property="twitter:title" content="<?php bloginfo('name'); ?>">
-    <meta property="twitter:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
-    <meta property="twitter:image" content="<?php echo esc_url(get_theme_mod('fpg_hero_image', get_template_directory_uri() . '/assets/images/og-image.jpg')); ?>">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon.ico'); ?>">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/apple-touch-icon.png'); ?>">
-    
-    <?php wp_head(); ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>II Foro Internacional de Paz Granada 2025</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-
-<!-- Preloader -->
-<div id="preloader">
-    <div class="loader">
-        <div class="peace-symbol">
-            <i class="fas fa-dove"></i>
-        </div>
-        <div class="loader-text"><?php esc_html_e('Cargando...', 'foro-paz-granada'); ?></div>
-    </div>
-</div>
-
-<div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Saltar al contenido', 'foro-paz-granada'); ?></a>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <?php
-                // Check if custom logo is set
-                if (has_custom_logo()) {
-                    the_custom_logo();
-                } else {
-                    ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <i class="fas fa-dove"></i>
-                        <span><?php bloginfo('name'); ?></span>
-                    </a>
-                    <?php
-                }
-                ?>
-            </div>
-            
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_id'        => 'primary-menu',
-                'menu_class'     => 'nav-menu',
-                'container'      => false,
-                'fallback_cb'    => 'fpg_default_menu',
-            ));
-            ?>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-foro.png" alt="Logo Foro Paz Granada 2025">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre el Foro</a></li>
+        <li><a href="#keymoments">Momentos Clave</a></li>
+        <li><a href="#program">Programa</a></li>
+        <li><a href="#speakers">Ponentes</a></li>
+        <li><a href="#artgallery">Exposiciones</a></li>
+        <li><a href="#simposio">Simposio</a></li>
+        <li><a href="#callforpapers">Ponencias</a></li>
+        <li><a href="#commitment">Compromiso</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <a href="#program" class="cta-btn">Inscríbete</a>
     </nav>
-
-    <?php
-    // Show hero section only on front page
-    if (is_front_page()) :
-        fpg_hero_section();
-    endif;
-    ?>
-
-    <div id="content" class="site-content">
+    <section class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>Granada: Capital Mundial de la Paz</h1>
+        <h2>II Foro Internacional de Paz Granada 2025</h2>
+        <p class="hero-lema">Violencia y Paz: Tensiones y Oportunidades hacia una Humanidad Común</p>
+        <p class="hero-fechas">Del 20 al 25 de octubre de 2025 | Granada, España</p>
+        <div class="hero-cta">
+          <a href="#program" class="cta-btn">Explora el Programa del Foro</a>
+          <a href="#callforpapers" class="cta-btn secondary">Enviar Ponencia</a>
+        </div>
+      </div>
+    </section>
+  </header>
