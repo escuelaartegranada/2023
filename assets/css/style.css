@@ -1,0 +1,123 @@
+/* Paleta de colores institucional */
+:root {
+  --azul-profundo: #0A1A3C;
+  --dorado-suave: #D1B07A;
+  --beige-claro: #F6F1E7;
+  --gris-institucional: #6B6B6B;
+  --verde-oliva: #6A7B5A;
+  --granate: #A02C2C;
+  --blanco: #fff;
+}
+body {
+  margin: 0;
+  font-family: 'Merriweather', 'Georgia', serif;
+  background: var(--beige-claro);
+  color: var(--azul-profundo);
+}
+.main-header {
+  position: relative;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--azul-profundo);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo img {
+  height: 48px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--beige-claro);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-links li a:hover {
+  color: var(--dorado-suave);
+}
+.cta-btn {
+  background: var(--dorado-suave);
+  color: var(--azul-profundo);
+  padding: 0.6em 1.4em;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.cta-btn.secondary {
+  background: var(--granate);
+  color: var(--blanco);
+}
+.cta-btn:hover {
+  background: var(--azul-profundo);
+  color: var(--dorado-suave);
+}
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--azul-profundo);
+  color: var(--beige-claro);
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../img/alhambra-bg.jpg') center/cover no-repeat;
+  opacity: 0.35;
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 0.5rem;
+}
+.hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.hero-lema {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.hero-fechas {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .navbar { flex-direction: column; padding: 1rem; }
+  .nav-links { flex-direction: column; gap: 0.5rem; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content h2 { font-size: 1.1rem; }
+}
