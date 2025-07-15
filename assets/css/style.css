@@ -252,3 +252,148 @@ body {
   border-radius: 0 0 12px 12px;
   font-size: 1rem;
 }
+
+/* Convocatoria de Ponencias */
+.call-for-papers {
+  background: var(--beige-claro);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(10,26,60,0.07);
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+.callfor-info ul.callfor-requisitos {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 1.2rem;
+  color: var(--azul-profundo);
+}
+.callfor-info ul.callfor-requisitos li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.callfor-calendar {
+  background: var(--dorado-suave);
+  color: var(--azul-profundo);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+.callfor-calendar h4 {
+  margin-top: 0;
+}
+.callfor-calendar ul {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+.callfor-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.callfor-form {
+  margin-top: 2rem;
+  background: var(--blanco);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 1px 6px rgba(10,26,60,0.06);
+  max-width: 420px;
+}
+.callfor-form h4 {
+  margin-top: 0;
+}
+.callfor-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.callfor-form input, .callfor-form textarea {
+  border: 1px solid var(--gris-institucional);
+  border-radius: 5px;
+  padding: 0.7em;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+.callfor-form textarea {
+  min-height: 80px;
+  max-height: 200px;
+}
+.callfor-form button {
+  align-self: flex-end;
+}
+
+/* Compromiso por la Paz */
+.commitment {
+  background: linear-gradient(90deg, var(--beige-claro) 70%, var(--dorado-suave) 100%);
+  border-radius: 12px;
+  margin: 2rem 0;
+  padding: 2.5rem 0 2rem 0;
+  text-align: center;
+}
+.commitment-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.commitment-question {
+  font-size: 1.4rem;
+  color: var(--granate);
+  margin-bottom: 1rem;
+}
+.commitment-message {
+  font-size: 1.1rem;
+  color: var(--azul-profundo);
+  margin-bottom: 1.5rem;
+}
+
+/* Contacto */
+.contact {
+  background: var(--beige-claro);
+  border-radius: 12px;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+.contact-resources ul {
+  margin: 0 0 1.5rem 1.2rem;
+  color: var(--azul-profundo);
+}
+.contact-info {
+  margin-bottom: 1.5rem;
+  color: var(--azul-profundo);
+}
+.contact-info a {
+  color: var(--granate);
+  text-decoration: none;
+}
+.contact-info a:hover {
+  color: var(--dorado-suave);
+}
+.contact-form {
+  background: var(--blanco);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 1px 6px rgba(10,26,60,0.06);
+  max-width: 420px;
+  margin: 0 auto;
+}
+.contact-form h4 {
+  margin-top: 0;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.contact-form input, .contact-form textarea {
+  border: 1px solid var(--gris-institucional);
+  border-radius: 5px;
+  padding: 0.7em;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+.contact-form textarea {
+  min-height: 80px;
+  max-height: 200px;
+}
+.contact-form button {
+  align-self: flex-end;
+}
