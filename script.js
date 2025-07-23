@@ -618,6 +618,422 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Gallery Tab Functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.gallery-tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Show corresponding content
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
+    // Initialize Swiper for Gallery
+    if (document.querySelector('.gallery-swiper') && typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('.gallery-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        });
+    }
+    
+    // Modal Functionality
+    window.openModal = function(modalId) {
+        createModal(modalId);
+    };
+    
+    function createModal(modalId) {
+        const modalContainer = document.getElementById('modal-container');
+        let modalContent = '';
+        
+        switch(modalId) {
+            case 'programa-modal':
+                modalContent = createProgramModal();
+                break;
+            case 'ponentes-modal':
+                modalContent = createSpeakersModal();
+                break;
+            case 'reglamento-modal':
+                modalContent = createRegulationModal();
+                break;
+            case 'galeria-lodz-modal':
+                modalContent = createLodzGalleryModal();
+                break;
+            case 'newsletter-modal':
+                modalContent = createNewsletterModal();
+                break;
+            default:
+                return;
+        }
+        
+        modalContainer.innerHTML = modalContent;
+        modalContainer.style.display = 'flex';
+        modalContainer.style.position = 'fixed';
+        modalContainer.style.top = '0';
+        modalContainer.style.left = '0';
+        modalContainer.style.width = '100%';
+        modalContainer.style.height = '100%';
+        modalContainer.style.zIndex = '9999';
+        document.body.style.overflow = 'hidden';
+        
+        // Add close functionality
+        const closeBtn = modalContainer.querySelector('.modal-close');
+        
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+        
+        modalContainer.addEventListener('click', (e) => {
+            if (e.target === modalContainer) {
+                closeModal();
+            }
+        });
+        
+        // ESC key to close
+        const escHandler = function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
+    }
+    
+    function closeModal() {
+        const modalContainer = document.getElementById('modal-container');
+        modalContainer.style.display = 'none';
+        modalContainer.innerHTML = '';
+        document.body.style.overflow = '';
+    }
+    
+    function createProgramModal() {
+        return `
+            <div class="modal-backdrop" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal" style="background: white; border-radius: 1.5rem; max-width: 64rem; max-height: 90vh; overflow-y: auto; width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #e53e3e 0%, #3182ce 30%, #38a169 70%, #9f7aea 100%); color: white; padding: 2rem; border-radius: 1.5rem 1.5rem 0 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 style="font-size: 2rem; font-weight: bold; margin: 0;"><i class="fas fa-calendar"></i> Programa Detallado - Granada 2025</h2>
+                            <button class="modal-close" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <div class="program-days" style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div style="background: white; border: 1px solid #e2e8f0; border-left: 4px solid #e53e3e; border-radius: 0.75rem; padding: 1.5rem;">
+                                <h3 style="font-size: 1.25rem; font-weight: bold; color: #e53e3e; margin-bottom: 1rem;"><i class="fas fa-star"></i> Lunes 20 de Octubre - Inauguración</h3>
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #e53e3e; min-width: 60px;">10:00</span>
+                                        <span>Inauguración oficial - Palacio de Carlos V, Alhambra</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #e53e3e; min-width: 60px;">10:30</span>
+                                        <span>Concierto del Conservatorio de Granada</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #e53e3e; min-width: 60px;">12:00</span>
+                                        <span>Conferencia magistral: Federico Mayor Zaragoza</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #e53e3e; min-width: 60px;">17:00</span>
+                                        <span>Conferencia: Francisco de Roux - "Verdad y Reconciliación"</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #e53e3e; min-width: 60px;">20:00</span>
+                                        <span>Inauguración Exposición Abya Yala - Casa Max Moreau</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="background: white; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; border-radius: 0.75rem; padding: 1.5rem;">
+                                <h3 style="font-size: 1.25rem; font-weight: bold; color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-comments"></i> Martes 21 de Octubre - Paneles</h3>
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #3182ce; min-width: 60px;">09:00</span>
+                                        <span>Panel 1: Memoria y Silencio</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #3182ce; min-width: 60px;">11:00</span>
+                                        <span>Panel 2: Educación para la Paz</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #3182ce; min-width: 60px;">15:00</span>
+                                        <span>Panel 3: Comunicación Transformadora</span>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <span style="font-weight: bold; color: #3182ce; min-width: 60px;">17:00</span>
+                                        <span>Conferencia: Stefan Peters - "Construcción de Paz en Colombia"</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="text-align: center; margin-top: 2rem;">
+                                <p style="color: #6b7280; margin-bottom: 1rem;">Y mucho más contenido durante los 6 días del foro...</p>
+                                <button onclick="closeModal()" style="background: #e53e3e; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: bold;">
+                                    <i class="fas fa-times"></i> Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createSpeakersModal() {
+        return `
+            <div class="modal-backdrop" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal" style="background: white; border-radius: 1.5rem; max-width: 64rem; max-height: 90vh; overflow-y: auto; width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #e53e3e 0%, #3182ce 30%, #38a169 70%, #9f7aea 100%); color: white; padding: 2rem; border-radius: 1.5rem 1.5rem 0 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 style="font-size: 2rem; font-weight: bold; margin: 0;"><i class="fas fa-users"></i> Ponentes Destacados</h2>
+                            <button class="modal-close" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div style="background: white; border: 1px solid #e2e8f0; border-left: 4px solid #e53e3e; border-radius: 0.75rem; padding: 1.5rem; text-align: center;">
+                                <div style="background: #e53e3e; color: white; border-radius: 50%; width: 4rem; height: 4rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-user" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Francisco de Roux</h3>
+                                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.75rem;">Expresidente Comisión de la Verdad - Colombia</p>
+                                <p style="font-size: 0.875rem;">Jesuita, economista y teólogo. Lideró la Comisión para el Esclarecimiento de la Verdad, la Convivencia y la No Repetición en Colombia.</p>
+                            </div>
+                            
+                            <div style="background: white; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; border-radius: 0.75rem; padding: 1.5rem; text-align: center;">
+                                <div style="background: #3182ce; color: white; border-radius: 50%; width: 4rem; height: 4rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-user" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Jenny Pearce</h3>
+                                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.75rem;">London School of Economics</p>
+                                <p style="font-size: 0.875rem;">Profesora emérita de Política Latinoamericana en LSE. Experta en construcción de paz, desarrollo y movimientos sociales en América Latina.</p>
+                            </div>
+                            
+                            <div style="background: white; border: 1px solid #e2e8f0; border-left: 4px solid #38a169; border-radius: 0.75rem; padding: 1.5rem; text-align: center;">
+                                <div style="background: #38a169; color: white; border-radius: 50%; width: 4rem; height: 4rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-user" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Ashok Swain</h3>
+                                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.75rem;">Universidad de Uppsala</p>
+                                <p style="font-size: 0.875rem;">Profesor de Investigación para la Paz y Conflictos. Experto en conflictos ambientales, seguridad hídrica y cambio climático.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <p style="color: #6b7280; margin-bottom: 1rem;">Y muchos más académicos, activistas y líderes de la sociedad civil de todo el mundo.</p>
+                            <button onclick="closeModal()" style="background: #3182ce; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: bold;">
+                                <i class="fas fa-times"></i> Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createRegulationModal() {
+        return `
+            <div class="modal-backdrop" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal" style="background: white; border-radius: 1.5rem; max-width: 48rem; max-height: 90vh; overflow-y: auto; width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #e53e3e 0%, #3182ce 30%, #38a169 70%, #9f7aea 100%); color: white; padding: 2rem; border-radius: 1.5rem 1.5rem 0 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 style="font-size: 2rem; font-weight: bold; margin: 0;"><i class="fas fa-file-alt"></i> Reglamento del Simposio</h2>
+                            <button class="modal-close" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; color: #9f7aea; margin-bottom: 0.75rem;">Objetivo</h3>
+                                <p style="color: #374151;">El II Simposio Internacional de Investigación para la Paz tiene como objetivo crear un espacio académico para el intercambio de conocimientos, experiencias e investigaciones sobre construcción de paz, justicia social y noviolencia.</p>
+                            </div>
+                            
+                            <div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; color: #e53e3e; margin-bottom: 0.75rem;">Modalidad y Fechas</h3>
+                                <ul style="list-style: disc; margin-left: 1.5rem; color: #374151;">
+                                    <li><strong>Modalidad:</strong> 100% virtual</li>
+                                    <li><strong>Fechas:</strong> 28-30 de octubre de 2025</li>
+                                    <li><strong>Duración:</strong> 3 días académicos intensivos</li>
+                                    <li><strong>Plataforma:</strong> Zoom y YouTube Live</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; color: #9f7aea; margin-bottom: 0.75rem;">Costos</h3>
+                                <div style="background: #f7fafc; padding: 1rem; border-radius: 0.75rem;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                        <span><strong>Ponentes:</strong></span>
+                                        <span style="color: #9f7aea; font-weight: bold;">USD $40</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                        <span>Asistentes:</span>
+                                        <span>Gratuito</span>
+                                    </div>
+                                    <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Los fondos recaudados se destinan a becas para participantes de países en desarrollo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button onclick="closeModal()" style="background: #9f7aea; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: bold;">
+                                <i class="fas fa-times"></i> Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createLodzGalleryModal() {
+        return `
+            <div class="modal-backdrop" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal" style="background: white; border-radius: 1.5rem; max-width: 64rem; max-height: 90vh; overflow-y: auto; width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #e53e3e 0%, #3182ce 30%, #38a169 70%, #9f7aea 100%); color: white; padding: 2rem; border-radius: 1.5rem 1.5rem 0 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 style="font-size: 2rem; font-weight: bold; margin: 0;"><i class="fas fa-images"></i> I Foro de Paz - Łódź 2024</h2>
+                            <button class="modal-close" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Galería de momentos destacados del primer Foro Internacional de Paz realizado en Łódź, Polonia.</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                            <div style="aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden;">
+                                <div style="width: 100%; height: 100%; background: #e53e3e; color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;">
+                                    <div>
+                                        <i class="fas fa-microphone" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                                        <p style="font-weight: bold; margin: 0.5rem 0;">Conferencia Inaugural</p>
+                                        <p style="font-size: 0.875rem; opacity: 0.9; margin: 0;">Universidad de Łódź</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden;">
+                                <div style="width: 100%; height: 100%; background: #3182ce; color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;">
+                                    <div>
+                                        <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                                        <p style="font-weight: bold; margin: 0.5rem 0;">Panel de Expertos</p>
+                                        <p style="font-size: 0.875rem; opacity: 0.9; margin: 0;">Diálogo intercultural</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden;">
+                                <div style="width: 100%; height: 100%; background: #38a169; color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;">
+                                    <div>
+                                        <i class="fas fa-hands" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                                        <p style="font-weight: bold; margin: 0.5rem 0;">Talleres Participativos</p>
+                                        <p style="font-size: 0.875rem; opacity: 0.9; margin: 0;">Construcción colectiva</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button onclick="closeModal()" style="background: #38a169; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: bold;">
+                                <i class="fas fa-times"></i> Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createNewsletterModal() {
+        return `
+            <div class="modal-backdrop" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal" style="background: white; border-radius: 1.5rem; max-width: 28rem; width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #e53e3e 0%, #3182ce 30%, #38a169 70%, #9f7aea 100%); color: white; padding: 2rem; border-radius: 1.5rem 1.5rem 0 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 style="font-size: 1.5rem; font-weight: bold; margin: 0;"><i class="fas fa-envelope"></i> Suscripción</h2>
+                            <button class="modal-close" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Mantente informado sobre el III Foro Internacional de Paz y todas nuestras actividades.</p>
+                        
+                        <form style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div>
+                                <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Correo electrónico</label>
+                                <input type="email" style="width: 100%; padding: 0.75rem 1rem; border: 2px solid #e2e8f0; border-radius: 0.75rem; font-size: 1rem;" placeholder="tu@email.com" required>
+                            </div>
+                            
+                            <button type="submit" style="background: #3182ce; color: white; border: none; padding: 0.75rem 1rem; border-radius: 0.75rem; cursor: pointer; font-weight: bold; width: 100%;">
+                                <i class="fas fa-bell"></i> Suscribirse al Boletín
+                            </button>
+                        </form>
+                        
+                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center; margin-top: 1rem;">
+                            <i class="fas fa-shield-alt"></i> Respetamos tu privacidad. Puedes darte de baja en cualquier momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Form Enhancements
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message (in a real implementation, this would submit to a server)
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
+            submitButton.style.background = '#38a169';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.style.background = '';
+                submitButton.disabled = false;
+                form.reset();
+            }, 3000);
+        });
+    });
+    
     console.log('🕊️ II Foro Internacional de la Paz - Granada 2025 - Sitio web cargado exitosamente');
 });
 

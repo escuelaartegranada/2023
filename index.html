@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación Unamos Culturas - Foro Internacional de la Paz</title>
-    <meta name="description" content="La Fundación Unamos Culturas es un espacio de encuentro, creación y transformación que articula arte, cultura, ciencia y noviolencia como pilares para la construcción de sociedades más justas.">
+    <title>II Foro Internacional de Paz Granada 2025 | Fundación Unamos Culturas</title>
+    <meta name="description" content="Únete al II Foro Internacional de Paz en Granada, 20-25 de octubre de 2025, y al Simposio Virtual, 28-30 de octubre. Promovemos paz, justicia y noviolencia.">
+    <meta name="keywords" content="paz, noviolencia, Granada, Foro 2025, Fundación Unamos Culturas, simposio, investigación">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="II Foro Internacional de Paz Granada 2025">
+    <meta property="og:description" content="Violencia y Paz: Tensiones y Oportunidades hacia una Humanidad Común">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unamosculturas.org">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕊️</text></svg>">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS for Gallery Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
                     <div class="logo-circles">
-                        <div class="circle red"></div>
-                        <div class="circle blue"></div>
-                        <div class="circle green"></div>
-                        <div class="circle purple"></div>
+                        <div class="circle science" title="Ciencia"></div>
+                        <div class="circle art" title="Arte"></div>
+                        <div class="circle culture" title="Cultura"></div>
+                        <div class="circle memory" title="Memoria"></div>
                     </div>
                     <span class="logo-text">UNAMOS CULTURAS</span>
                 </div>
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
-                        <li class="nav-item"><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
-                        <li class="nav-item"><a href="#programas" class="nav-link">Programas</a></li>
+                        <li class="nav-item"><a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="#quienes-somos" class="nav-link"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+                        <li class="nav-item"><a href="#programas" class="nav-link"><i class="fas fa-project-diagram"></i> Programas</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#foros" class="nav-link">Foros de Paz <span class="dropdown-arrow">▼</span></a>
+                            <a href="#foros" class="nav-link"><i class="fas fa-dove"></i> Foros de Paz <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                             <div class="dropdown-content">
-                                <a href="#foro-lodz-2024">I Foro - Łódź 2024</a>
-                                <a href="#foro-granada-2025">II Foro - Granada 2025</a>
-                                <a href="#simposio">Simposio Internacional</a>
-                                <a href="#proximo-foro">Próxima Edición</a>
+                                <a href="#foro-lodz-2024"><i class="fas fa-history"></i> I Foro - Łódź 2024</a>
+                                <a href="#foro-granada-2025"><i class="fas fa-star"></i> II Foro - Granada 2025</a>
+                                <a href="#simposio"><i class="fas fa-laptop"></i> Simposio Internacional</a>
+                                <a href="#proximo-foro"><i class="fas fa-question-circle"></i> Próxima Edición</a>
                             </div>
                         </li>
-                        <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
-                        <li class="nav-item"><a href="#noticias" class="nav-link">Noticias</a></li>
-                        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="#galeria" class="nav-link"><i class="fas fa-images"></i> Galería</a></li>
+                        <li class="nav-item"><a href="#noticias" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                        <li class="nav-item"><a href="#colabora" class="nav-link"><i class="fas fa-handshake"></i> Colabora</a></li>
+                        <li class="nav-item"><a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
                     </ul>
                 </div>
                 <div class="nav-toggle" id="nav-toggle">
@@ -55,65 +75,168 @@
         <section id="inicio" class="hero">
             <div class="hero-background">
                 <div class="hero-overlay"></div>
+                <div class="hero-pattern"></div>
             </div>
             <div class="hero-content">
                 <div class="container">
-                    <h1 class="hero-title">Fundación Unamos Culturas</h1>
-                    <p class="hero-subtitle">Un espacio de encuentro, creación y transformación que articula arte, cultura, ciencia y noviolencia como pilares para la construcción de sociedades más justas.</p>
-                    <div class="hero-buttons">
-                        <a href="#foro-granada-2025" class="btn btn-primary">Conoce el II Foro Internacional de Paz Granada 2025</a>
-                        <a href="#newsletter" class="btn btn-secondary">Suscríbete al Boletín</a>
+                    <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title">II Foro Internacional de Paz<br><span class="text-gradient">Granada 2025</span></h1>
+                        <p class="hero-subtitle">"Violencia y Paz: Tensiones y Oportunidades hacia una Humanidad Común"</p>
+                        <div class="hero-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt text-science"></i>
+                                <span>20-25 de Octubre de 2025</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt text-art"></i>
+                                <span>Granada, España</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-university text-culture"></i>
+                                <span>Universidad de Granada & Alhambra</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <a href="#foro-granada-2025" class="btn btn-primary btn-large btn-pulse">
+                            <i class="fas fa-dove"></i> Conoce el Foro
+                        </a>
+                        <a href="#colabora" class="btn btn-secondary btn-large">
+                            <i class="fas fa-user-plus"></i> Inscríbete
+                        </a>
+                    </div>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <p class="cta-question">¿Y tú, qué haces por la paz?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- News Highlights Section -->
+        <section class="news-highlights section-sm bg-light">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title text-science">
+                        <i class="fas fa-bullhorn"></i> Últimas Noticias
+                    </h2>
+                </div>
+                <div class="news-highlights-grid grid grid-cols-1 md:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-highlight-card card">
+                        <div class="news-category bg-science">Convocatoria</div>
+                        <h4 class="mb-2">Abierta convocatoria de ponencias</h4>
+                        <p class="text-sm text-gray-600 mb-3">Participa en el II Simposio Internacional de Investigación para la Paz</p>
+                        <a href="#simposio" class="text-science font-semibold">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="news-highlight-card card">
+                        <div class="news-category bg-art">Evento</div>
+                        <h4 class="mb-2">Confirmados ponentes internacionales</h4>
+                        <p class="text-sm text-gray-600 mb-3">Francisco de Roux, Jenny Pearce y Ashok Swain participarán en Granada 2025</p>
+                        <a href="#foro-granada-2025" class="text-art font-semibold">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="news-highlight-card card">
+                        <div class="news-category bg-culture">Memoria</div>
+                        <h4 class="mb-2">Disponible memoria del I Foro de Łódź</h4>
+                        <p class="text-sm text-gray-600 mb-3">Descarga las conclusiones y ponencias del primer encuentro internacional</p>
+                        <a href="#foro-lodz-2024" class="text-culture font-semibold">Descargar <i class="fas fa-download"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="quienes-somos" class="about-section">
+        <section id="quienes-somos" class="about-section section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Quiénes Somos</h2>
-                    <p class="section-subtitle">Desde nuestra vocación internacional, tejemos redes de diálogo plural, cooperación académica y acción comunitaria</p>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-heart text-memory"></i> Quiénes Somos
+                    </h2>
+                    <p class="section-subtitle lead">La Fundación Unamos Culturas es un espacio de encuentro, creación y transformación que articula arte, cultura, ciencia y noviolencia como pilares para la construcción de sociedades más justas.</p>
                 </div>
                 
-                <div class="about-grid">
-                    <div class="about-card">
-                        <div class="card-icon red"></div>
-                        <h3>Historia</h3>
-                        <p>Desde 2006, somos un puente vivo entre América Latina y Europa, impulsando exposiciones, talleres, festivales, foros y acciones de justicia social.</p>
+                <div class="about-content grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-text">
+                        <h3 class="text-3xl font-bold mb-4 text-science">Nuestra Misión</h3>
+                        <p class="text-lg mb-4">Desde nuestra vocación internacional, tejemos redes de diálogo plural, cooperación académica y acción comunitaria para promover la paz, la memoria y la noviolencia.</p>
+                        <p class="mb-4">Trabajamos con especial énfasis en la dignidad de los pueblos originarios latinoamericanos, articulando saberes ancestrales con conocimiento contemporáneo.</p>
+                        <div class="values-list">
+                            <div class="value-item flex items-center gap-3 mb-2">
+                                <i class="fas fa-check-circle text-culture"></i>
+                                <span>Diálogo plural e intercultural</span>
+                            </div>
+                            <div class="value-item flex items-center gap-3 mb-2">
+                                <i class="fas fa-check-circle text-culture"></i>
+                                <span>Justicia histórica y memoria</span>
+                            </div>
+                            <div class="value-item flex items-center gap-3 mb-2">
+                                <i class="fas fa-check-circle text-culture"></i>
+                                <span>Solidaridad y noviolencia</span>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="about-card">
-                        <div class="card-icon blue"></div>
-                        <h3>Misión y Visión</h3>
-                        <p>Tejer redes internacionales para la promoción de la paz, la memoria y la noviolencia mediante arte, cultura y ciencia.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <div class="card-icon green"></div>
-                        <h3>Valores</h3>
-                        <p>Diálogo plural, justicia histórica, solidaridad, dignidad de los pueblos originarios.</p>
+                    <div class="about-visual">
+                        <div class="mission-graphic bg-gradient rounded-2xl p-8 text-white text-center">
+                            <i class="fas fa-globe-americas text-6xl mb-4 opacity-90"></i>
+                            <h4 class="text-xl font-bold mb-2">Desde 2006</h4>
+                            <p>Construyendo puentes entre América Latina y Europa</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="identity-section">
-                    <h3>Nueva Identidad Gráfica</h3>
-                    <div class="identity-grid">
-                        <div class="identity-item">
-                            <div class="identity-circle red"></div>
-                            <p><strong>Ciencia:</strong> Motor de conocimiento, investigación y diálogo académico</p>
+                <div class="identity-section" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-center text-3xl font-bold mb-4">Nueva Identidad Gráfica</h3>
+                    <p class="text-center text-lg text-gray-600 mb-8">Cuatro pilares que definen nuestro compromiso con la transformación social</p>
+                    <div class="identity-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="identity-item card text-center hover-scale" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="identity-circle science mx-auto mb-3"></div>
+                            <h4 class="text-science font-bold text-lg mb-2">
+                                <i class="fas fa-flask"></i> Ciencia
+                            </h4>
+                            <p class="text-sm">Motor de conocimiento, investigación y diálogo académico</p>
                         </div>
-                        <div class="identity-item">
-                            <div class="identity-circle blue"></div>
-                            <p><strong>Arte:</strong> Lenguaje universal de expresión, memoria viva y transformación social</p>
+                        <div class="identity-item card text-center hover-scale" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="identity-circle art mx-auto mb-3"></div>
+                            <h4 class="text-art font-bold text-lg mb-2">
+                                <i class="fas fa-palette"></i> Arte
+                            </h4>
+                            <p class="text-sm">Lenguaje universal de expresión, memoria viva y transformación social</p>
                         </div>
-                        <div class="identity-item">
-                            <div class="identity-circle green"></div>
-                            <p><strong>Cultura:</strong> Articula saberes, prácticas comunitarias y tradiciones</p>
+                        <div class="identity-item card text-center hover-scale" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="identity-circle culture mx-auto mb-3"></div>
+                            <h4 class="text-culture font-bold text-lg mb-2">
+                                <i class="fas fa-seedling"></i> Cultura
+                            </h4>
+                            <p class="text-sm">Articula saberes, prácticas comunitarias y tradiciones</p>
                         </div>
-                        <div class="identity-item">
-                            <div class="identity-circle purple"></div>
-                            <p><strong>Memoria:</strong> Dignidad de los pueblos originarios latinoamericanos</p>
+                        <div class="identity-item card text-center hover-scale" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="identity-circle memory mx-auto mb-3"></div>
+                            <h4 class="text-memory font-bold text-lg mb-2">
+                                <i class="fas fa-feather-alt"></i> Memoria
+                            </h4>
+                            <p class="text-sm">Dignidad de los pueblos originarios latinoamericanos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-section mt-5" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-center text-3xl font-bold mb-4">Equipo y Red de Aliados</h3>
+                    <div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="team-card card text-center">
+                            <i class="fas fa-user-graduate text-4xl text-science mb-3"></i>
+                            <h4 class="font-bold">Mario López Martínez</h4>
+                            <p class="text-sm text-gray-600">Director Académico</p>
+                        </div>
+                        <div class="team-card card text-center">
+                            <i class="fas fa-user-tie text-4xl text-art mb-3"></i>
+                            <h4 class="font-bold">Julián Ramírez</h4>
+                            <p class="text-sm text-gray-600">Coordinador Internacional</p>
+                        </div>
+                        <div class="ally-card card text-center">
+                            <i class="fas fa-university text-4xl text-culture mb-3"></i>
+                            <h4 class="font-bold">Red de Instituciones</h4>
+                            <p class="text-sm text-gray-600">IPAZ, CAPAZ, UNESCO, Instituto Confucio</p>
                         </div>
                     </div>
                 </div>
@@ -121,46 +244,107 @@
         </section>
 
         <!-- Programs Section -->
-        <section id="programas" class="programs-section">
+        <section id="programas" class="programs-section section bg-light">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Programas y Proyectos</h2>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram text-art"></i> Programas y Proyectos
+                    </h2>
                     <p class="section-subtitle">Nuestros tres ejes permanentes para la transformación social</p>
                 </div>
                 
-                <div class="programs-grid">
-                    <div class="program-card science">
-                        <div class="program-icon red"></div>
-                        <h3>Ciencia</h3>
-                        <p>Investigación, diálogo académico y producción de conocimiento para la paz y la transformación social.</p>
-                        <ul>
-                            <li>Simposios internacionales</li>
-                            <li>Publicaciones académicas</li>
-                            <li>Redes de investigación</li>
+                <div class="programs-grid grid grid-cols-1 lg:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-card card hover-scale border-t-4 border-science">
+                        <div class="program-header text-center mb-4">
+                            <div class="program-icon science rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                <i class="fas fa-flask text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-science font-bold text-xl">Ciencia</h3>
+                        </div>
+                        <p class="mb-4">Investigación, diálogo académico y producción de conocimiento para la paz y la transformación social.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-microscope text-science"></i>
+                                <span>Simposios internacionales</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-book text-science"></i>
+                                <span>Publicaciones académicas</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-network-wired text-science"></i>
+                                <span>Redes de investigación</span>
+                            </li>
                         </ul>
+                        <div class="impact-stats bg-light rounded-lg p-3 text-center">
+                            <div class="text-2xl font-bold text-science">500+</div>
+                            <div class="text-sm text-gray-600">Participantes en el I Foro de Łódź</div>
+                        </div>
                     </div>
                     
-                    <div class="program-card art">
-                        <div class="program-icon blue"></div>
-                        <h3>Arte</h3>
-                        <p>Expresión artística como herramienta de memoria, resistencia y transformación comunitaria.</p>
-                        <ul>
-                            <li>Exposiciones internacionales</li>
-                            <li>Talleres creativos</li>
-                            <li>Festivales culturales</li>
+                    <div class="program-card card hover-scale border-t-4 border-art">
+                        <div class="program-header text-center mb-4">
+                            <div class="program-icon art rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                <i class="fas fa-palette text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-art font-bold text-xl">Arte</h3>
+                        </div>
+                        <p class="mb-4">Expresión artística como herramienta de memoria, resistencia y transformación comunitaria.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-images text-art"></i>
+                                <span>Exposiciones internacionales</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-hands text-art"></i>
+                                <span>Talleres creativos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-music text-art"></i>
+                                <span>Festivales culturales</span>
+                            </li>
                         </ul>
+                        <div class="impact-stats bg-light rounded-lg p-3 text-center">
+                            <div class="text-2xl font-bold text-art">15+</div>
+                            <div class="text-sm text-gray-600">Exposiciones realizadas</div>
+                        </div>
                     </div>
                     
-                    <div class="program-card culture">
-                        <div class="program-icon green"></div>
-                        <h3>Cultura</h3>
-                        <p>Preservación y promoción de saberes tradicionales y prácticas comunitarias inclusivas.</p>
-                        <ul>
-                            <li>Campañas de sensibilización</li>
-                            <li>Talleres comunitarios</li>
-                            <li>Intercambios culturales</li>
+                    <div class="program-card card hover-scale border-t-4 border-culture">
+                        <div class="program-header text-center mb-4">
+                            <div class="program-icon culture rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                <i class="fas fa-seedling text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-culture font-bold text-xl">Cultura</h3>
+                        </div>
+                        <p class="mb-4">Preservación y promoción de saberes ancestrales y prácticas comunitarias para la construcción de paz.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-globe-americas text-culture"></i>
+                                <span>Diálogo intercultural</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-users text-culture"></i>
+                                <span>Iniciativas comunitarias</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-heart text-culture"></i>
+                                <span>Memoria histórica</span>
+                            </li>
                         </ul>
+                        <div class="impact-stats bg-light rounded-lg p-3 text-center">
+                            <div class="text-2xl font-bold text-culture">8</div>
+                            <div class="text-sm text-gray-600">Países participantes</div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="programs-cta text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-3">¿Quieres formar parte de nuestras iniciativas?</h3>
+                    <p class="text-lg text-gray-600 mb-4">Únete a nuestra red internacional de colaboradores comprometidos con la paz y la justicia social</p>
+                    <a href="#colabora" class="btn btn-culture btn-large">
+                        <i class="fas fa-handshake"></i> Únete a nuestras iniciativas
+                    </a>
                 </div>
             </div>
         </section>
@@ -284,31 +468,377 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section id="galeria" class="gallery-section">
+        <!-- Forums Section -->
+        <section id="foros" class="forums-section section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Galería y Memoria Histórica</h2>
-                    <p class="section-subtitle">Archivo visual de nuestras exposiciones, talleres, campañas y actividades</p>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-dove text-science"></i> Foros Internacionales de Paz
+                    </h2>
+                    <p class="section-subtitle">Los Foros Internacionales de Paz no son eventos aislados, sino eslabones de una cadena viva que articula memorias, saberes y redes para imaginar juntos futuros más justos.</p>
+                </div>
+
+                <!-- Forum Granada 2025 - Main Highlight -->
+                <div id="foro-granada-2025" class="forum-highlight card mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="forum-content grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+                        <div class="forum-info">
+                            <div class="forum-badge bg-science text-white rounded-full px-4 py-2 inline-block mb-3">
+                                <i class="fas fa-star"></i> EVENTO PRINCIPAL
+                            </div>
+                            <h3 class="text-3xl font-bold mb-4 text-science">II Foro Internacional de Paz</h3>
+                            <p class="text-xl italic text-memory mb-4">"Violencia y Paz: Tensiones y Oportunidades hacia una Humanidad Común"</p>
+                            
+                            <div class="forum-details grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                <div class="detail-item bg-light rounded-lg p-3 flex items-center gap-3">
+                                    <i class="fas fa-calendar-alt text-science text-xl"></i>
+                                    <div>
+                                        <div class="font-semibold">Fechas</div>
+                                        <div class="text-sm text-gray-600">20-25 de Octubre de 2025</div>
+                                    </div>
+                                </div>
+                                <div class="detail-item bg-light rounded-lg p-3 flex items-center gap-3">
+                                    <i class="fas fa-map-marker-alt text-art text-xl"></i>
+                                    <div>
+                                        <div class="font-semibold">Ubicación</div>
+                                        <div class="text-sm text-gray-600">Granada, España</div>
+                                    </div>
+                                </div>
+                                <div class="detail-item bg-light rounded-lg p-3 flex items-center gap-3">
+                                    <i class="fas fa-university text-culture text-xl"></i>
+                                    <div>
+                                        <div class="font-semibold">Sede Principal</div>
+                                        <div class="text-sm text-gray-600">Universidad de Granada</div>
+                                    </div>
+                                </div>
+                                <div class="detail-item bg-light rounded-lg p-3 flex items-center gap-3">
+                                    <i class="fas fa-crown text-memory text-xl"></i>
+                                    <div>
+                                        <div class="font-semibold">Inauguración</div>
+                                        <div class="text-sm text-gray-600">Palacio de Carlos V</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="forum-buttons flex flex-wrap gap-3">
+                                <button class="btn btn-primary" onclick="openModal('programa-modal')">
+                                    <i class="fas fa-calendar"></i> Ver Programa
+                                </button>
+                                <button class="btn btn-art" onclick="openModal('ponentes-modal')">
+                                    <i class="fas fa-users"></i> Ponentes
+                                </button>
+                                <a href="#colabora" class="btn btn-culture">
+                                    <i class="fas fa-user-plus"></i> Inscripciones
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="forum-visual">
+                            <div class="forum-poster bg-gradient rounded-2xl p-8 text-white text-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient opacity-90"></div>
+                                <div class="relative z-10">
+                                    <i class="fas fa-dove text-6xl mb-4 opacity-90"></i>
+                                    <h4 class="text-xl font-bold mb-2">II Foro Internacional de Paz</h4>
+                                    <p class="mb-2">Granada 2025</p>
+                                    <p class="text-sm opacity-80">20-25 de Octubre</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Symposium Section -->
+                <div id="simposio" class="symposium-section card mb-5 border-l-4 border-memory" data-aos="fade-up" data-aos-delay="400">
+                    <div class="symposium-header text-center mb-4">
+                        <h3 class="text-2xl font-bold text-memory mb-2">
+                            <i class="fas fa-laptop"></i> II Simposio Internacional de Investigación para la Paz
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-3">Perspectivas y retos de nuestro presente y futuro</p>
+                        <div class="symposium-badges flex justify-center gap-3 flex-wrap">
+                            <span class="bg-memory text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                <i class="fas fa-calendar"></i> 28-30 de Octubre de 2025
+                            </span>
+                            <span class="bg-light text-gray-700 px-4 py-2 rounded-full text-sm font-semibold">
+                                <i class="fas fa-video"></i> 100% Virtual
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="symposium-content grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
+                        <div class="lg:col-span-2">
+                            <p class="text-lg mb-4">El II Simposio Internacional Virtual de Investigación para la Paz se celebra como espacio académico especializado y complementario al II Foro Internacional de Paz Granada 2025, convocando a investigadores, docentes, estudiantes de posgrado, activistas y profesionales.</p>
+                            
+                            <div class="key-dates bg-light rounded-lg p-4 mb-4">
+                                <h4 class="font-bold text-memory mb-3"><i class="fas fa-clock"></i> Cronograma</h4>
+                                <div class="timeline space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span>Convocatoria abierta:</span>
+                                        <span class="font-semibold">Julio 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Envío de ponencias:</span>
+                                        <span class="font-semibold">Hasta 15 de agosto 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Resultados:</span>
+                                        <span class="font-semibold">Septiembre 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Inscripciones:</span>
+                                        <span class="font-semibold">15 sept - 15 oct 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Certificados:</span>
+                                        <span class="font-semibold">Diciembre 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card bg-gradient text-white rounded-lg p-4 text-center">
+                            <h4 class="font-bold text-xl mb-3">Información Clave</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="text-2xl font-bold">$40 USD</div>
+                                    <div class="text-sm opacity-90">Cuota por ponente</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold">12</div>
+                                    <div class="text-sm opacity-90">Mesas temáticas</div>
+                                </div>
+                                <div class="text-sm opacity-90">
+                                    <i class="fas fa-envelope"></i><br>
+                                    simposiopazfuc@inaesvirtual.edu.py
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="symposium-actions text-center mb-4">
+                        <div class="btn-group">
+                            <button class="btn btn-memory" onclick="openModal('reglamento-modal')">
+                                <i class="fas fa-file-alt"></i> Ver Reglamento
+                            </button>
+                            <a href="#colabora" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Inscribir Ponencia
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Thematic Tables -->
+                    <div class="thematic-tables">
+                        <h4 class="text-center font-bold text-lg mb-4 text-memory">
+                            <i class="fas fa-table"></i> Mesas Temáticas
+                        </h4>
+                        <div class="tables-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-memory text-memory"></i> Memoria colectiva y reconciliación posconflicto
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-leaf text-culture"></i> La violencia estructural y comunidades indígenas
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-balance-scale text-science"></i> Justicia transicional y derechos humanos
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-tree text-culture"></i> Ecología política y justicia ambiental
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-venus text-art"></i> Género, mujeres y paz
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-palette text-art"></i> Arte, memoria y cultura de paz
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-bullhorn text-science"></i> Comunicación transformadora
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-fist-raised text-science"></i> Resistencias globales
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-history text-memory"></i> Historia contemporánea de la paz
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-chess-king text-science"></i> Autocracias, conflictos armados y élites económicas
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-graduation-cap text-culture"></i> Educación para la paz, saberes del Sur
+                            </div>
+                            <div class="table-item bg-light rounded-lg p-3 text-sm border-l-3 border-memory hover:shadow-md transition-all">
+                                <i class="fas fa-brain text-memory"></i> Teorías, filosofías y epistemologías de la paz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous and Next Forums -->
+                <div class="other-forums grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="600">
+                    <div id="foro-lodz-2024" class="previous-forum card border-l-4 border-culture">
+                        <h4 class="text-lg font-bold text-culture mb-2">
+                            <i class="fas fa-history"></i> I Foro Internacional de Paz – Łódź 2024
+                        </h4>
+                        <p class="text-gray-600 mb-4">Nuestro primer Foro Internacional marcó el inicio de esta serie de encuentros académicos y comunitarios para la construcción de paz.</p>
+                        <div class="forum-links flex flex-wrap gap-2">
+                            <a href="#" class="btn btn-small btn-culture">
+                                <i class="fas fa-file-download"></i> Manifiesto Final
+                            </a>
+                            <button class="btn btn-small btn-secondary" onclick="openModal('galeria-lodz-modal')">
+                                <i class="fas fa-images"></i> Galería
+                            </button>
+                            <a href="#" class="btn btn-small btn-secondary">
+                                <i class="fas fa-book"></i> Memorias
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="proximo-foro" class="next-forum card border-l-4 border-art">
+                        <h4 class="text-lg font-bold text-art mb-2">
+                            <i class="fas fa-question-circle"></i> III Foro Internacional de Paz
+                        </h4>
+                        <p class="text-gray-600 mb-4">La sede del III Foro Internacional de Paz se revelará durante la clausura del II Foro en Granada 2025.</p>
+                        <button class="btn btn-art" onclick="openModal('newsletter-modal')">
+                            <i class="fas fa-bell"></i> Suscríbete para recibir noticias
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeria" class="gallery-section section bg-light">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-images text-memory"></i> Galería y Memoria Histórica
+                    </h2>
+                    <p class="section-subtitle">Archivo visual de nuestras exposiciones, talleres, foros y actividades</p>
                 </div>
                 
-                <div class="gallery-tabs">
-                    <button class="tab-btn active" data-tab="exposiciones">Exposiciones</button>
-                    <button class="tab-btn" data-tab="talleres">Talleres</button>
-                    <button class="tab-btn" data-tab="foros">Foros</button>
-                    <button class="tab-btn" data-tab="testimonios">Testimonios</button>
+                <div class="gallery-tabs flex justify-center gap-2 mb-5 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+                    <button class="tab-btn active bg-memory text-white" data-tab="exposiciones">
+                        <i class="fas fa-images"></i> Exposiciones
+                    </button>
+                    <button class="tab-btn" data-tab="talleres">
+                        <i class="fas fa-hands"></i> Talleres
+                    </button>
+                    <button class="tab-btn" data-tab="foros">
+                        <i class="fas fa-dove"></i> Foros
+                    </button>
+                    <button class="tab-btn" data-tab="testimonios">
+                        <i class="fas fa-quote-left"></i> Testimonios
+                    </button>
                 </div>
                 
-                <div class="gallery-content">
-                    <div class="gallery-grid" id="exposiciones">
-                        <div class="gallery-item">
-                            <div class="gallery-placeholder">Exposición 1</div>
+                <div class="gallery-content" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-tab-content active" id="exposiciones">
+                        <!-- Swiper -->
+                        <div class="swiper gallery-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="gallery-item">
+                                        <div class="gallery-placeholder bg-gradient rounded-lg text-white flex items-center justify-center text-center p-4">
+                                            <div>
+                                                <i class="fas fa-image text-4xl mb-2 opacity-75"></i>
+                                                <h4 class="font-bold">Exposición Abya Yala</h4>
+                                                <p class="text-sm opacity-90">Casa Max Moreau, Granada</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery-item">
+                                        <div class="gallery-placeholder bg-art rounded-lg text-white flex items-center justify-center text-center p-4">
+                                            <div>
+                                                <i class="fas fa-paint-brush text-4xl mb-2 opacity-75"></i>
+                                                <h4 class="font-bold">Trazos de Paz</h4>
+                                                <p class="text-sm opacity-90">Intervención artística</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery-item">
+                                        <div class="gallery-placeholder bg-culture rounded-lg text-white flex items-center justify-center text-center p-4">
+                                            <div>
+                                                <i class="fas fa-globe-americas text-4xl mb-2 opacity-75"></i>
+                                                <h4 class="font-bold">Diálogo Intercultural</h4>
+                                                <p class="text-sm opacity-90">Mesa redonda</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery-item">
+                                        <div class="gallery-placeholder bg-science rounded-lg text-white flex items-center justify-center text-center p-4">
+                                            <div>
+                                                <i class="fas fa-microscope text-4xl mb-2 opacity-75"></i>
+                                                <h4 class="font-bold">Investigación Participativa</h4>
+                                                <p class="text-sm opacity-90">Metodologías colaborativas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="gallery-item">
-                            <div class="gallery-placeholder">Exposición 2</div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-placeholder">Exposición 3</div>
+                    </div>
+
+                    <div class="gallery-tab-content" id="testimonios">
+                        <div class="testimonials-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="testimonial-card card border-l-4 border-memory">
+                                <div class="mb-3">
+                                    <i class="fas fa-quote-left text-2xl text-memory opacity-50"></i>
+                                </div>
+                                <p class="italic mb-4">"Los Foros de Paz son espacios únicos donde convergen academia, arte y activismo para construir puentes hacia la justicia social."</p>
+                                <div class="testimonial-author">
+                                    <div class="flex items-center gap-3">
+                                        <div class="author-avatar bg-memory text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Dr. Mario López Martínez</div>
+                                            <div class="text-sm text-gray-600">Director Académico</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card card border-l-4 border-art">
+                                <div class="mb-3">
+                                    <i class="fas fa-quote-left text-2xl text-art opacity-50"></i>
+                                </div>
+                                <p class="italic mb-4">"La articulación entre memoria histórica y perspectivas futuras hace de estos encuentros una experiencia transformadora."</p>
+                                <div class="testimonial-author">
+                                    <div class="flex items-center gap-3">
+                                        <div class="author-avatar bg-art text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Participante Łódź 2024</div>
+                                            <div class="text-sm text-gray-600">Investigadora en Paz</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card card border-l-4 border-culture">
+                                <div class="mb-3">
+                                    <i class="fas fa-quote-left text-2xl text-culture opacity-50"></i>
+                                </div>
+                                <p class="italic mb-4">"Un espacio donde los saberes ancestrales dialogan con el conocimiento académico contemporáneo."</p>
+                                <div class="testimonial-author">
+                                    <div class="flex items-center gap-3">
+                                        <div class="author-avatar bg-culture text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Líder Comunitario</div>
+                                            <div class="text-sm text-gray-600">América Latina</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,125 +846,319 @@
         </section>
 
         <!-- News Section -->
-        <section id="noticias" class="news-section">
+        <section id="noticias" class="news-section section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Noticias y Publicaciones</h2>
-                    <p class="section-subtitle">Mantente al día con nuestras últimas actividades y reflexiones</p>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-newspaper text-art"></i> Noticias y Publicaciones
+                    </h2>
+                    <p class="section-subtitle">Mantente informado sobre nuestras actividades, comunicados y publicaciones académicas</p>
                 </div>
                 
-                <div class="news-grid">
-                    <article class="news-card featured">
-                        <div class="news-image"></div>
-                        <div class="news-content">
-                            <span class="news-category">Comunicado</span>
-                            <h3>Lanzamiento oficial del II Foro Internacional de Paz Granada 2025</h3>
-                            <p>Anunciamos con gran entusiasmo el lanzamiento del II Foro Internacional de Paz que tendrá lugar en Granada, España...</p>
-                            <div class="news-meta">
-                                <span class="news-date">15 de enero, 2025</span>
-                                <a href="#" class="news-link">Leer más</a>
-                            </div>
+                <div class="news-grid grid grid-cols-1 lg:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <article class="news-card card lg:col-span-2 border-l-4 border-science">
+                        <div class="news-badge bg-science text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-3 inline-block">
+                            <i class="fas fa-bullhorn"></i> Comunicado Principal
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-science">II Foro Internacional de Paz Granada 2025</h3>
+                        <p class="text-gray-600 mb-4">Anunciamos oficialmente la realización del II Foro Internacional de Paz Granada 2025, que se llevará a cabo del 20 al 25 de octubre en la ciudad de Granada, España. Un evento que reunirá a académicos, activistas y líderes comunitarios de todo el mundo.</p>
+                        <div class="news-meta flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-calendar"></i> 15 de enero de 2025</span>
+                            <a href="#foro-granada-2025" class="text-science font-semibold hover:underline">
+                                Leer más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
                     
-                    <article class="news-card">
-                        <div class="news-content">
-                            <span class="news-category">Convocatoria</span>
-                            <h4>Abierta convocatoria para ponencias del I Simposio Internacional</h4>
-                            <p>Invitamos a investigadores, académicos y activistas a enviar sus propuestas...</p>
-                            <div class="news-meta">
-                                <span class="news-date">10 de enero, 2025</span>
-                                <a href="#" class="news-link">Leer más</a>
+                    <div class="space-y-4">
+                        <article class="news-card card border-l-4 border-memory">
+                            <div class="news-badge bg-memory text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-2 inline-block">
+                                <i class="fas fa-paper-plane"></i> Convocatoria
                             </div>
-                        </div>
-                    </article>
-                    
-                    <article class="news-card">
-                        <div class="news-content">
-                            <span class="news-category">Publicación</span>
-                            <h4>Memorias del I Foro Internacional de Paz - Łódź 2024</h4>
-                            <p>Ya están disponibles las memorias completas de nuestro primer foro internacional...</p>
-                            <div class="news-meta">
-                                <span class="news-date">20 de diciembre, 2024</span>
-                                <a href="#" class="news-link">Descargar</a>
+                            <h4 class="text-lg font-bold mb-2 text-memory">Abierta convocatoria para ponencias</h4>
+                            <p class="text-sm text-gray-600 mb-3">Invitamos a investigadores, académicos y activistas a participar en el II Simposio Internacional de Investigación para la Paz.</p>
+                            <div class="news-meta flex justify-between items-center text-xs">
+                                <span class="text-gray-500"><i class="fas fa-calendar"></i> 10 de enero de 2025</span>
+                                <a href="#simposio" class="text-memory font-semibold hover:underline">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
+                        </article>
+                        
+                        <article class="news-card card border-l-4 border-culture">
+                            <div class="news-badge bg-culture text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-2 inline-block">
+                                <i class="fas fa-book"></i> Publicación
+                            </div>
+                            <h4 class="text-lg font-bold mb-2 text-culture">Memorias del I Foro de Łódź</h4>
+                            <p class="text-sm text-gray-600 mb-3">Ya están disponibles las memorias completas del I Foro Internacional de Paz realizado en Łódź, Polonia.</p>
+                            <div class="news-meta flex justify-between items-center text-xs">
+                                <span class="text-gray-500"><i class="fas fa-calendar"></i> 8 de enero de 2025</span>
+                                <a href="#foro-lodz-2024" class="text-culture font-semibold hover:underline">
+                                    Descargar <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="newsletter-cta bg-gradient rounded-2xl p-8 text-white text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-3">
+                        <i class="fas fa-envelope"></i> Suscríbete a nuestro boletín
+                    </h3>
+                    <p class="mb-4 opacity-90">Recibe las últimas noticias, convocatorias y actualizaciones sobre nuestros foros y actividades</p>
+                    <div class="newsletter-form max-w-md mx-auto">
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded-lg text-gray-700" required>
+                            <button type="submit" class="btn btn-secondary px-6">
+                                <i class="fas fa-paper-plane"></i> Suscribirse
+                            </button>
                         </div>
-                    </article>
+                        <p class="text-xs mt-2 opacity-75">
+                            <i class="fas fa-shield-alt"></i> Respetamos tu privacidad. Solo contenido relevante sobre paz y justicia social.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter-section">
+        <!-- Collaborate Section -->
+        <section id="colabora" class="collaborate-section section bg-light">
             <div class="container">
-                <div class="newsletter-content">
-                    <h3>Mantente Conectado</h3>
-                    <p>Suscríbete a nuestro boletín para recibir las últimas noticias sobre los Foros Internacionales de Paz y nuestras actividades.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu correo electrónico" required>
-                        <button type="submit" class="btn btn-primary">Suscribirse</button>
-                    </form>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-handshake text-culture"></i> Colabora
+                    </h2>
+                    <p class="section-subtitle">¿Y tú, qué haces por la paz? Únete a nuestra red internacional de colaboradores comprometidos con la transformación social</p>
+                </div>
+
+                <div class="collaboration-types grid grid-cols-1 md:grid-cols-3 gap-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="collab-card card text-center hover-scale border-t-4 border-culture">
+                        <div class="collab-icon bg-culture text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hands text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-culture mb-3">Voluntariado</h3>
+                        <p class="text-gray-600 mb-4">Participa activamente en nuestros eventos, talleres y actividades de promoción de la paz.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check text-culture"></i> Apoyo en eventos</li>
+                            <li><i class="fas fa-check text-culture"></i> Difusión en redes</li>
+                            <li><i class="fas fa-check text-culture"></i> Traducción</li>
+                            <li><i class="fas fa-check text-culture"></i> Fotografía/Video</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-card card text-center hover-scale border-t-4 border-art">
+                        <div class="collab-icon bg-art text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-art mb-3">Patrocinio</h3>
+                        <p class="text-gray-600 mb-4">Apoya financieramente nuestras iniciativas y forma parte del cambio hacia sociedades más justas.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check text-art"></i> Patrocinio de eventos</li>
+                            <li><i class="fas fa-check text-art"></i> Becas para participantes</li>
+                            <li><i class="fas fa-check text-art"></i> Publicaciones</li>
+                            <li><i class="fas fa-check text-art"></i> Proyectos específicos</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-card card text-center hover-scale border-t-4 border-science">
+                        <div class="collab-icon bg-science text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-science mb-3">Convenios</h3>
+                        <p class="text-gray-600 mb-4">Establece alianzas institucionales para amplificar el impacto de nuestras acciones.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check text-science"></i> Universidades</li>
+                            <li><i class="fas fa-check text-science"></i> ONGs</li>
+                            <li><i class="fas fa-check text-science"></i> Instituciones públicas</li>
+                            <li><i class="fas fa-check text-science"></i> Centros de investigación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form-section" data-aos="fade-up" data-aos-delay="400">
+                    <div class="max-w-2xl mx-auto">
+                        <div class="card">
+                            <h3 class="text-2xl font-bold text-center mb-4 text-memory">
+                                <i class="fas fa-envelope"></i> Propuesta de Cooperación
+                            </h3>
+                            <p class="text-center text-gray-600 mb-6">Comparte tu propuesta de colaboración y nos pondremos en contacto contigo</p>
+                            
+                            <form class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="form-group">
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                            <i class="fas fa-user"></i> Nombre completo *
+                                        </label>
+                                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-art focus:border-transparent" placeholder="Tu nombre completo" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                            <i class="fas fa-envelope"></i> Correo electrónico *
+                                        </label>
+                                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-art focus:border-transparent" placeholder="tu@email.com" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="form-group">
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                            <i class="fas fa-building"></i> Organización/Institución
+                                        </label>
+                                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-art focus:border-transparent" placeholder="Nombre de tu organización">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                            <i class="fas fa-tags"></i> Tipo de colaboración *
+                                        </label>
+                                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-art focus:border-transparent" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="voluntariado">Voluntariado</option>
+                                            <option value="patrocinio">Patrocinio</option>
+                                            <option value="convenio">Convenio institucional</option>
+                                            <option value="ponencia">Propuesta de ponencia</option>
+                                            <option value="taller">Propuesta de taller</option>
+                                            <option value="exposicion">Propuesta de exposición</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                        <i class="fas fa-comment"></i> Propuesta/Mensaje *
+                                    </label>
+                                    <textarea rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-art focus:border-transparent" placeholder="Describe tu propuesta de colaboración, experiencia relevante y cómo te gustaría contribuir a la construcción de paz..." required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" class="rounded border-gray-300 text-art focus:ring-art" required>
+                                        <span class="text-sm text-gray-600">Acepto la política de privacidad y el tratamiento de mis datos personales para fines de comunicación relacionados con la Fundación Unamos Culturas *</span>
+                                    </label>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-culture btn-large">
+                                        <i class="fas fa-paper-plane"></i> Enviar Propuesta
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contacto" class="contact-section">
+        <section id="contacto" class="contact-section section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Contacto y Colaboración</h2>
-                    <p class="section-subtitle">Únete a nuestra red de transformación social</p>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="fas fa-envelope text-science"></i> Contacto
+                    </h2>
+                    <p class="section-subtitle">Ponte en contacto con nosotros para cualquier consulta, propuesta de colaboración o información adicional</p>
                 </div>
                 
-                <div class="contact-grid">
+                <div class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-5" data-aos="fade-up" data-aos-delay="200">
                     <div class="contact-info">
-                        <h3>Información de Contacto</h3>
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span>info@unamosculturas.org</span>
+                        <div class="card">
+                            <h3 class="text-2xl font-bold mb-4 text-science">
+                                <i class="fas fa-info-circle"></i> Información de Contacto
+                            </h3>
+                            
+                            <div class="contact-items space-y-4 mb-6">
+                                <div class="contact-item flex items-center gap-4 p-3 bg-light rounded-lg">
+                                    <div class="contact-icon bg-science text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">Correo Electrónico</div>
+                                        <a href="mailto:unamosculturas@gmail.com" class="text-science hover:underline">unamosculturas@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item flex items-center gap-4 p-3 bg-light rounded-lg">
+                                    <div class="contact-icon bg-art text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">Teléfono</div>
+                                        <a href="tel:+48515209172" class="text-art hover:underline">+48 515 209 172</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item flex items-center gap-4 p-3 bg-light rounded-lg">
+                                    <div class="contact-icon bg-culture text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">Ubicación</div>
+                                        <span class="text-culture">Granada, España</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-section">
+                                <h4 class="font-bold text-memory mb-3">
+                                    <i class="fas fa-share-alt"></i> Síguenos en redes sociales
+                                </h4>
+                                <div class="social-links flex gap-3">
+                                    <a href="#" class="social-link bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span>simposiopazfuc@inaesvirtual.edu.py</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🌐</span>
-                            <span>www.unamosculturas.org</span>
-                        </div>
-                        
-                        <h4>Modalidades de Colaboración</h4>
-                        <ul class="collaboration-list">
-                            <li>Voluntariado en eventos</li>
-                            <li>Patrocinio y donaciones</li>
-                            <li>Convenios interinstitucionales</li>
-                            <li>Redes académicas</li>
-                            <li>Propuestas de cooperación</li>
-                        </ul>
                     </div>
                     
-                    <div class="contact-form-container">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" placeholder="Nombre completo" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Correo electrónico" required>
-                            </div>
-                            <div class="form-group">
-                                <select required>
-                                    <option value="">Tipo de consulta</option>
-                                    <option value="voluntariado">Voluntariado</option>
-                                    <option value="patrocinio">Patrocinio</option>
-                                    <option value="convenio">Convenio institucional</option>
-                                    <option value="academico">Colaboración académica</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Mensaje" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                        </form>
+                    <div class="contact-form-wrapper">
+                        <div class="card">
+                            <h3 class="text-2xl font-bold mb-4 text-memory">
+                                <i class="fas fa-comment"></i> Envíanos un mensaje
+                            </h3>
+                            <form class="space-y-4">
+                                <div class="form-group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo *</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-memory focus:border-transparent" placeholder="Tu nombre completo" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Correo electrónico *</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-memory focus:border-transparent" placeholder="tu@email.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Tipo de consulta *</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-memory focus:border-transparent" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="general">Consulta general</option>
+                                        <option value="colaboracion">Propuesta de colaboración</option>
+                                        <option value="patrocinio">Patrocinio</option>
+                                        <option value="voluntariado">Voluntariado</option>
+                                        <option value="prensa">Prensa y medios</option>
+                                        <option value="academico">Consulta académica</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje *</label>
+                                    <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-memory focus:border-transparent" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-memory btn-large w-full">
+                                    <i class="fas fa-paper-plane"></i> Enviar mensaje
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -442,60 +1166,111 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-dark text-white">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-circles">
-                            <div class="circle red"></div>
-                            <div class="circle blue"></div>
-                            <div class="circle green"></div>
-                            <div class="circle purple"></div>
+                    <div class="footer-logo mb-4">
+                        <div class="logo-circles mb-3">
+                            <div class="circle science inline-block mr-1"></div>
+                            <div class="circle art inline-block mr-1"></div>
+                            <div class="circle culture inline-block mr-1"></div>
+                            <div class="circle memory inline-block"></div>
                         </div>
-                        <span class="logo-text">UNAMOS CULTURAS</span>
+                        <h4 class="text-xl font-bold">Fundación Unamos Culturas</h4>
                     </div>
-                    <p>Espacio de encuentro, creación y transformación que articula arte, cultura, ciencia y noviolencia para la construcción de sociedades más justas.</p>
+                    <p class="text-sm text-gray-300 mb-4">Un espacio de encuentro, creación y transformación que articula arte, cultura, ciencia y noviolencia como pilares para la construcción de sociedades más justas.</p>
+                    <div class="social-links flex gap-3">
+                        <a href="#" class="social-icon bg-science text-white rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-art text-white rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-culture text-white rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-memory text-white rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-youtube text-sm"></i>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul class="footer-links">
-                        <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                        <li><a href="#programas">Programas</a></li>
-                        <li><a href="#foros">Foros de Paz</a></li>
-                        <li><a href="#galeria">Galería</a></li>
-                        <li><a href="#noticias">Noticias</a></li>
+                    <h4 class="text-lg font-bold mb-3 text-science">
+                        <i class="fas fa-link"></i> Enlaces Rápidos
+                    </h4>
+                    <ul class="footer-links space-y-2 text-sm">
+                        <li><a href="#quienes-somos" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Quiénes Somos</a></li>
+                        <li><a href="#programas" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Programas</a></li>
+                        <li><a href="#foros" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Foros de Paz</a></li>
+                        <li><a href="#galeria" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Galería</a></li>
+                        <li><a href="#noticias" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Noticias</a></li>
+                        <li><a href="#colabora" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Colabora</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Próximos Eventos</h4>
-                    <ul class="footer-links">
-                        <li><a href="#foro-granada-2025">II Foro Granada 2025</a></li>
-                        <li><a href="#simposio">Simposio Internacional</a></li>
-                        <li><a href="#inscripciones">Inscripciones</a></li>
+                    <h4 class="text-lg font-bold mb-3 text-art">
+                        <i class="fas fa-dove"></i> Foros de Paz
+                    </h4>
+                    <ul class="footer-links space-y-2 text-sm">
+                        <li><a href="#foro-lodz-2024" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>I Foro - Łódź 2024</a></li>
+                        <li><a href="#foro-granada-2025" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>II Foro - Granada 2025</a></li>
+                        <li><a href="#simposio" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Simposio Internacional</a></li>
+                        <li><a href="#proximo-foro" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i>Próxima Edición</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">LinkedIn</a>
+                    <h4 class="text-lg font-bold mb-3 text-culture">
+                        <i class="fas fa-envelope"></i> Contacto
+                    </h4>
+                    <div class="contact-info space-y-2 text-sm">
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope text-science mr-2"></i>
+                            <a href="mailto:unamosculturas@gmail.com" class="hover:text-white transition-colors">unamosculturas@gmail.com</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone text-art mr-2"></i>
+                            <a href="tel:+48515209172" class="hover:text-white transition-colors">+48 515 209 172</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt text-culture mr-2"></i>
+                            Granada, España
+                        </p>
                     </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 Fundación Unamos Culturas. Todos los derechos reservados.</p>
-                <p>Desarrollado con el compromiso de construir un mundo más justo y pacífico.</p>
+            <div class="footer-bottom border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2025 Fundación Unamos Culturas. 
+                    <span class="text-memory">Contenido bajo licencia Creative Commons BY-NC-SA 4.0</span>
+                </p>
+                <p class="text-xs text-gray-500 mt-2">
+                    <i class="fas fa-heart text-science"></i> Construyendo puentes hacia la paz desde 2006
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Modals will be added via JavaScript -->
+    <div id="modal-container"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
